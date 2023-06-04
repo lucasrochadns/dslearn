@@ -1,4 +1,4 @@
-package com.dslearn.programa.resource;
+package com.dslearn.programa.repository;
 
 import com.dslearn.programa.domain.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;

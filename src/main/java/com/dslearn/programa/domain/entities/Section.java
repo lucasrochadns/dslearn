@@ -3,6 +3,8 @@ package com.dslearn.programa.domain.entities;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -24,6 +26,9 @@ public class Section implements Serializable {
     @ManyToOne
     @JoinColumn(name = "resource_id")
     private Resource resource;
+
+    @OneToMany(mappedBy = "section")
+    private List<Lesson> lessons = new ArrayList<>();
 
     public Section(Long id, String title, String description, Integer position, String imgUri, Section prerequisite, Resource resource) {
         this.id = id;
@@ -81,6 +86,10 @@ public class Section implements Serializable {
 
     public void setResource(Resource resource) {
         this.resource = resource;
+    }
+
+    public List<Lesson> getLessons() {
+        return lessons;
     }
 
     @Override

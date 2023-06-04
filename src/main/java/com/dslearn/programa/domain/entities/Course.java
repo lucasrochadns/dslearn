@@ -3,6 +3,9 @@ package com.dslearn.programa.domain.entities;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -17,6 +20,8 @@ public class Course implements Serializable {
     private String imgUrl;
     private String imgGray;
 
+    @OneToMany(mappedBy = "course")
+    private List<Offer> offers = new ArrayList<>();
     public Course() {
     }
 
@@ -57,6 +62,10 @@ public class Course implements Serializable {
 
     public void setImgGray(String imgGray) {
         this.imgGray = imgGray;
+    }
+
+    public List<Offer> getOffers() {
+        return offers;
     }
 
     @Override

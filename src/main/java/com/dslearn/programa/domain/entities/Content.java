@@ -1,6 +1,8 @@
 package com.dslearn.programa.domain.entities;
 
-import jakarta.persistence.*;
+
+
+import javax.persistence.*;
 
 @Entity
 @Table(name = "tb_content")

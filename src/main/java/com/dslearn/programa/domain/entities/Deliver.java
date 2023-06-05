@@ -1,7 +1,7 @@
 package com.dslearn.programa.domain.entities;
 
 import com.dslearn.programa.domain.entities.enums.DeliverStatus;
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 import java.io.Serializable;
 import java.time.Instant;

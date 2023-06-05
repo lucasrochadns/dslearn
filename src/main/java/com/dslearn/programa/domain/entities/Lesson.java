@@ -1,9 +1,6 @@
 package com.dslearn.programa.domain.entities;
 
-import jakarta.persistence.*;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;

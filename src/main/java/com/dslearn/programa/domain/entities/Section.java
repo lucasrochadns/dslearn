@@ -1,7 +1,6 @@
 package com.dslearn.programa.domain.entities;
 
-import jakarta.persistence.*;
-
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
